@@ -1,5 +1,5 @@
 CREATE TABLE manager(
-    manager_id      NUMBER      GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
+    manager_id      NUMBER      GENERATED AS IDENTITY PRIMARY KEY,
     name            VARCHAR(30) NOT NULL,
     surname         VARCHAR(30) NOT NULL,
     spec            VARCHAR(5)  CHECK(spec IN ('rent', 'sale', 'buy', 'trade')) NOT NULL,
@@ -8,13 +8,13 @@ CREATE TABLE manager(
 );  
 
 CREATE TABLE room(
-    room_id         NUMBER      GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
+    room_id         NUMBER      GENERATED AS IDENTITY PRIMARY KEY,
     type            VARCHAR(10) CHECK(type IN('isolated', 'adjacent')) NOT NULL,
     area            NUMBER      CHECK(area > 0) NOT NULL
 );  
 
 CREATE TABLE house(
-    house_id        NUMBER      GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
+    house_id        NUMBER      GENERATED AS IDENTITY PRIMARY KEY,
     district        VARCHAR(30) NOT NULL,
     street          VARCHAR(30) NOT NULL,
     num             NUMBER      CHECK(num > 0) NOT NULL,
@@ -24,19 +24,19 @@ CREATE TABLE house(
 );
 
 CREATE TABLE kitchen(
-    kitchen_id      NUMBER      GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
+    kitchen_id      NUMBER      GENERATED AS IDENTITY PRIMARY KEY,
     area            NUMBER      CHECK(area > 0) NOT NULL,
     cooker_type     VARCHAR(10) CHECK(cooker_type IN('gas', 'electric')) NOT NULL
 );
 
 CREATE TABLE customer(
-    customer_id     NUMBER      GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
+    customer_id     NUMBER      GENERATED AS IDENTITY PRIMARY KEY,
     name            VARCHAR(30) NOT NULL,
     surname         VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE property(
-    property_id     NUMBER      GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
+    property_id     NUMBER      GENERATED AS IDENTITY PRIMARY KEY,
     house_id        NUMBER      REFERENCES house(house_id) NOT NULL,
     floor           NUMBER      CHECK(floor > 0) NOT NULL,
     apartments      NUMBER      CHECK(apartments > 0) NOT NULL,
@@ -49,13 +49,13 @@ CREATE TABLE property(
 );
 
 CREATE TABLE property_room(
-    property_room_id NUMBER     GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    property_room_id NUMBER     GENERATED AS IDENTITY PRIMARY KEY,
     property_id     NUMBER      REFERENCES property(property_id) NOT NULL,
     room_id         NUMBER      REFERENCES room(room_id) NOT NULL
 );
 
 CREATE TABLE exchange(
-    exchange_id     NUMBER      GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    exchange_id     NUMBER      GENERATED AS IDENTITY PRIMARY KEY,
     manager_id      NUMBER      REFERENCES manager(manager_id) NOT NULL,
     customer_id     NUMBER      REFERENCES customer(customer_id)  NOT NULL,
     property_id     NUMBER      REFERENCES property(property_id)  NOT NULL,

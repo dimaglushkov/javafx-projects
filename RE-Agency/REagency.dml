@@ -1,28 +1,28 @@
 -- manager table
 ------------------------------------------
-INSERT INTO manager (name, surname, spec, comission)
-	VALUES('name1', 'surname1', 'sale', 22);
+INSERT INTO manager (manager_id, name, surname, spec, comission)
+	VALUES(1, 'name1', 'surname1', 'sale', 22);
 
-INSERT INTO manager (name, surname, spec, comission)
-	VALUES('name2', 'surname2', 'sale', 24);
+INSERT INTO manager (manager_id, name, surname, spec, comission)
+	VALUES(2, 'name2', 'surname2', 'sale', 24);
 
-INSERT INTO manager (name, surname, spec, comission)
-	VALUES('name3', 'surname3', 'sale', 30);
+INSERT INTO manager (manager_id, name, surname, spec, comission)
+	VALUES(3,'name3', 'surname3', 'sale', 30);
 
-INSERT INTO manager (name, surname, spec, comission)
-	VALUES('name4', 'surname4', 'rent', 15);
+INSERT INTO manager (manager_id, name, surname, spec, comission)
+	VALUES(4, 'name4', 'surname4', 'rent', 15);
 
-INSERT INTO manager (name, surname, spec, comission)
-	VALUES('name5', 'surname5', 'rent', 16);
+INSERT INTO manager (manager_id, name, surname, spec, comission)
+	VALUES(5, 'name5', 'surname5', 'rent', 16);
 
-INSERT INTO manager (name, surname, spec, comission)
-	VALUES('name6', 'surname7', 'rent', 17);
+INSERT INTO manager (manager_id, name, surname, spec, comission)
+	VALUES(6, 'name6', 'surname7', 'rent', 17);
 
-INSERT INTO manager (name, surname, spec, comission)
-	VALUES('name7', 'surname7', 'buy', 20);
+INSERT INTO manager (manager_id, name, surname, spec, comission)
+	VALUES(7, 'name7', 'surname7', 'buy', 20);
 
-INSERT INTO manager (name, surname, spec, comission)
-	VALUES('name8', 'surname8', 'trade', 13);
+INSERT INTO manager (manager_id, name, surname, spec, comission)
+	VALUES(8, 'name8', 'surname8', 'trade', 13);
 
 SELECT * FROM manager;
 ------------------------------------------

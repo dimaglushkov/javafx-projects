@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="REAgency.Controllers.RegisterController">
+   <children>
+      <Label fx:id="pageNameLabel" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" text="Регистрация">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="150.0" prefWidth="585.0">
+         <children>
+            <VBox alignment="TOP_RIGHT" prefHeight="150.0" prefWidth="121.0" spacing="8.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="TOP" prefHeight="29.0" prefWidth="35.0" text="Имя">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="TOP" prefHeight="29.0" prefWidth="99.0" text="Фамилия">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="75.0" layoutY="10.0" prefHeight="29.0" prefWidth="176.0" text="Специализация">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="75.0" layoutY="39.0" prefHeight="29.0" prefWidth="115.0" text="Комиссия">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="75.0" layoutY="35.0" prefHeight="29.0" prefWidth="118.0" text="Пароль">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+               <children>
+                  <TextField id="idInput" fx:id="nameInput" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="241.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="idInput" fx:id="surnameInput" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="241.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <ChoiceBox fx:id="specInput" prefHeight="26.0" prefWidth="241.0" value="Продажа">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Продажа" />
+                           <String fx:value="Покупка" />
+                           <String fx:value="Аренда" />
+                           <String fx:value="Обмен" />
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
+                  <TextField id="idInput" fx:id="comissionInput" layoutX="10.0" layoutY="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="241.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="passwordInput" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="240.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="28.0" prefWidth="600.0" spacing="15.0">
+         <children>
+            <Button id="loginButton" fx:id="registerButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#register" prefHeight="29.0" prefWidth="154.0" text="Зарегистрироваться">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button id="registerButton" fx:id="loginButton" mnemonicParsing="false" onAction="#loginPage" prefHeight="29.0" prefWidth="113.0" text="Авторизация">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <Label fx:id="wrongInputLabel" text="Некорректные значения при регистрации" textFill="RED" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>
