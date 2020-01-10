@@ -1,14 +1,23 @@
 package REAgency;
 
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-import REAgency.DAO.ManagerDAO;
-import REAgency.Entity.Manager;
+public class Main extends Application {
 
-public class Main {
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/sample.fxml"));
+        primaryStage.setTitle("Hello World");
+        primaryStage.setScene(new Scene(root, 750, 600));
+        primaryStage.show();
+    }
+
 
     public static void main(String[] args) {
-        ManagerDAO managerDAO = new ManagerDAO();
-        Manager manager = managerDAO.findByManagerId(1);
-        System.out.print(manager.getName() + manager.getSurname());
+        launch(args);
     }
 }
