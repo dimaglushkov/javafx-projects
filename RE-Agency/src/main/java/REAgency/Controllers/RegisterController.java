@@ -6,9 +6,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -19,6 +22,15 @@ public class RegisterController {
 
     @FXML
     private Label pageNameLabel;
+
+    @FXML
+    private HBox inputForm;
+
+    @FXML
+    private VBox mainContainer;
+
+    @FXML
+    private Button registerButton;
 
     @FXML
     private TextField nameInput;
@@ -55,7 +67,22 @@ public class RegisterController {
         manager.setComission(Integer.parseInt(comissionInput.getText()));
 
         managerDAO.create(manager);
-        System.out.print("entity created");
+
+        long userId = manager.getId();
+        System.out.print(userId);
+
+        inputForm.setVisible(false);
+        inputForm.setManaged(false);
+        registerButton.setVisible(false);
+        registerButton.setManaged(false);
+
+        Label congrtzLabel = new Label("Вы успешно зарегистрировались в системе! Ваш id: " + userId);
+        congrtzLabel.setFont(pageNameLabel.getFont());
+
+        mainContainer.getChildren().add(1, congrtzLabel);
+
+
+
 
     }
 

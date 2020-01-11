@@ -266,3 +266,28 @@ WHERE
     AND exchange.expire_date > '01-JAN-2020'
     AND exchange.expire_date < '01-JAN-2025'
 GROUP BY customer.name, customer.surname, house.district;
+
+
+
+
+SELECT 
+    manager.name, sum(exchange.worth)
+FROM
+    manager
+    INNER JOIN exchange on exchange.manager_id = manager.manager_id
+GROUP BY 
+    manager.name, exchange.start_date
+HAVING
+    exchange.start_date > '01-JAN-2020'
+    AND exchange.start_date < '01-JAN-2025';
+
+SELECT 
+    "C##TESTUSER"."РАСТЕНИЯ"."НАЗВАНИЕ", SUM("C##TESTUSER"."ПРОДАЖИ"."ЦЕНА")
+FROM
+    "C##TESTUSER"."РАСТЕНИЯ".
+    INNER JOIN "C##TESTUSER"."ПРОДАЖИ" ON "C##TESTUSER"."РАСТЕНИЯ"."КОД_Р" = "C##TESTUSER"."ПРОДАЖИ"."КОД_РАСТЕНИЯ"
+GROUP BY 
+    "C##TESTUSER"."РАСТЕНИЯ"."НАЗВАНИЕ", "C##TESTUSER"."ПРОДАЖИ"."ДАТА"
+HAVING
+    "C##TESTUSER"."ПРОДАЖИ"."ДАТА" > '01-JAN-2020'
+    AND "C##TESTUSER"."ПРОДАЖИ"."ДАТА" < '01-JAN-2025';
