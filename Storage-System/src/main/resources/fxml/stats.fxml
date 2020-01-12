@@ -12,7 +12,7 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StorageSystem.FXMLControllers.StatsController">
    <children>
-      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="850.0" spacing="10.0">
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="850.0" spacing="10.0" style="-fx-background-color: rgb(180,255,255);">
          <children>
             <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="32.0" prefWidth="756.0" spacing="12.0">
                <children>
@@ -24,7 +24,7 @@
                   <ComboBox fx:id="criteriaBox" prefHeight="33.0" prefWidth="145.0" promptText="Все" />
                   <TextField fx:id="criteriaValue" prefHeight="28.0" prefWidth="211.0">
                      <font>
-                        <Font name="Arial" size="16.0" />
+                        <Font size="16.0" />
                      </font>
                      <HBox.margin>
                         <Insets />
@@ -44,10 +44,13 @@
             </Button>
          </children>
          <VBox.margin>
-            <Insets top="10.0" />
+            <Insets />
          </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" top="10.0" />
+         </padding>
       </HBox>
-      <Label fx:id="statsLabel" alignment="CENTER" prefHeight="17.0" prefWidth="1000.0" text="stats">
+      <Label fx:id="statsLabel" alignment="CENTER" prefHeight="17.0" prefWidth="2000.0" style="-fx-background-color: rgb(180,255,255);" text="stats">
          <font>
             <Font size="18.0" />
          </font>

@@ -5,7 +5,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
             <property name="hibernate.connection.driver_class" value="org.sqlite.JDBC"/>
-            <property name="hibernate.connection.url" value="jdbc:sqlite:./storage-system.db"/>
+            <property name="hibernate.connection.url" value="jdbc:sqlite:storage-system.db"/>
             <property name="hibernate.connection.username" value=""/>
             <property name="hibernate.connection.password" value=""/>
             <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
