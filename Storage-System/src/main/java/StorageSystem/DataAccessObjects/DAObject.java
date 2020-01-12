@@ -1,4 +1,4 @@
-package StorageSystem.DAO;
+package StorageSystem.DataAccessObjects;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -7,17 +7,17 @@ import javax.persistence.criteria.CriteriaQuery;
 import java.io.Serializable;
 import java.util.List;
 
-public class DAOService<T, PK extends Serializable> {
+public class DAObject<T, PK extends Serializable> {
 
     private EntityManagerFactory entityManagerFactory = PersistenceManager.getInstance().getEntityManagerFactory();
 
     private Class<T> type;
 
-    public DAOService() {
+    public DAObject() {
     }
 
 
-    public DAOService(Class <T> type) {
+    public DAObject(Class <T> type) {
         this.type=type;
     }
 

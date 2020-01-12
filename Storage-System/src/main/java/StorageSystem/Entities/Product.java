@@ -2,7 +2,7 @@ package StorageSystem.Entities;
 
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name="PRODUCT")
@@ -10,7 +10,6 @@ public class Product {
 
     @Id
     @Column(name="PRODUCT_ID")
-//    @GeneratedValue
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
@@ -23,21 +22,34 @@ public class Product {
     @Column(name="DESCRIPTION")
     private String description;
 
-    @Column(name="RECEIVED_DATE")
-    private Date receivedDate;
+    @Column(name="MANUFACTURER")
+    private String manufacturer;
 
-    @Column(name="SOLD_DATE")
-    private Date soldDate;
+    @ManyToOne
+    @JoinColumn(name = "LOCATION", referencedColumnName = "STORAGE_ID")
+    private Storage location;
+
+    @Column(name="PRICE")
+    private Integer price;
+
+    @Column(name="RECEIVED_TIME")
+    private Timestamp receivedTime;
+
+    @Column(name="SOLD_TIME", nullable=true)
+    private Timestamp soldTime;
 
     public Product() {
     }
 
-    public Product(String vendorCode, String category, String description, Date receivedDate, Date soldDate) {
+    public Product(String vendorCode, String category, String description, String manufacturer, Storage location, Integer price, Timestamp receivedTime, Timestamp soldDate) {
         this.vendorCode = vendorCode;
         this.category = category;
         this.description = description;
-        this.receivedDate = receivedDate;
-        this.soldDate = soldDate;
+        this.manufacturer = manufacturer;
+        this.location = location;
+        this.price = price;
+        this.receivedTime = receivedTime;
+        this.soldTime = soldDate;
     }
 
     public Integer getId() {
@@ -72,19 +84,44 @@ public class Product {
         this.description = description;
     }
 
-    public Date getReceivedDate() {
-        return receivedDate;
+    public String getManufacturer() {
+        return manufacturer;
     }
 
-    public void setReceivedDate(Date receivedDate) {
-        this.receivedDate = receivedDate;
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
     }
 
-    public Date getSoldDate() {
-        return soldDate;
+    public Storage getLocation() {
+        return location;
     }
 
-    public void setSoldDate(Date soldDate) {
-        this.soldDate = soldDate;
+    public void setLocation(Storage location) {
+        this.location = location;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public Timestamp getReceivedTime() {
+        return receivedTime;
+    }
+
+    public void setReceivedTime(Timestamp receivedTime) {
+        this.receivedTime = receivedTime;
+    }
+
+    public Timestamp getSoldTime() {
+        return soldTime;
+    }
+
+    public void setSoldTime(Timestamp soldTime) {
+        this.soldTime = soldTime;
     }
 }
+

@@ -1,4 +1,4 @@
-package StorageSystem.DAO;
+package StorageSystem.DataAccessObjects;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
