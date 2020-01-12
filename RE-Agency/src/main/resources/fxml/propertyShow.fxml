@@ -9,7 +9,7 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="REAgency.Controllers.PropertyShowController">
    <children>
-      <HBox prefHeight="30.0" prefWidth="900.0" style="-fx-background-color: rgb(230,230,230);">
+      <HBox prefHeight="30.0" prefWidth="900.0" style="-fx-background-color: rgb(230,230,230);" VBox.vgrow="ALWAYS">
          <children>
             <Label fx:id="infoLabel" alignment="BOTTOM_LEFT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: rgb(230,230,230);" text="info">
                <font>
@@ -37,6 +37,6 @@
             </Label>
          </children>
       </HBox>
-      <TableView fx:id="propertyTable" prefHeight="718.0" prefWidth="900.0" />
+      <TableView fx:id="propertyTable" prefHeight="718.0" prefWidth="900.0" VBox.vgrow="ALWAYS" />
    </children>
 </VBox>

@@ -55,7 +55,7 @@ public class PropertyAddController implements Initializable {
         List<String> addresses = new ArrayList<>();;
         houses = daoService.findAll();
         for (House house : houses)
-            addresses.add(house.getId() + ". Улица" + house.getStreet() + ", дом " + house.getNum());
+            addresses.add(house.getId() + ". Улица " + house.getStreet() + ", дом " + house.getNum());
 
         ObservableList<String> list = FXCollections.observableArrayList(addresses);
         houseBox.setItems(list);

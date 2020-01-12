@@ -51,18 +51,23 @@ public class PropertyShowController implements Initializable {
         List<Property> properties = daoService.findAll();
 
         TableColumn<Data, Long> idCol = new TableColumn<>("id");
+        idCol.setPrefWidth(50);
         idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
 
         TableColumn<Data, String> houseDistrictCol = new TableColumn<>("Район");
+        houseDistrictCol.setPrefWidth(250);
         houseDistrictCol.setCellValueFactory(new PropertyValueFactory<>("houseDistrict"));
 
         TableColumn<Data, String> houseStreetCol = new TableColumn<>("Улица");
+        houseStreetCol.setPrefWidth(200);
         houseStreetCol.setCellValueFactory(new PropertyValueFactory<>("houseStreet"));
 
         TableColumn<Data, Integer> houseNumCol = new TableColumn<>("Номер дома");
+        houseNumCol.setPrefWidth(50);
         houseNumCol.setCellValueFactory(new PropertyValueFactory<>("houseNum"));
 
         TableColumn<Data, Integer> apartmentsCol = new TableColumn<>("Номер квартиры");
+        houseNumCol.setPrefWidth(100);
         apartmentsCol.setCellValueFactory(new PropertyValueFactory<>("apartments"));
 
         TableColumn<Data, Integer> areaCol = new TableColumn<>("Площадь");

@@ -31,7 +31,12 @@ public class PropertyController implements Initializable {
     }
 
     public void delete(MouseEvent event){
-        System.out.print("delete()");
+        Stage stage = (Stage) infoLabel.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/fxml/propertyDelete.fxml"))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void show(MouseEvent event){
@@ -44,9 +49,10 @@ public class PropertyController implements Initializable {
     }
 
     public void back(MouseEvent event){
+        Session.INSTANCE.finish();
         Stage stage = (Stage) infoLabel.getScene().getWindow();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/fxml/main.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/fxml/login.fxml"))));
         } catch (IOException e) {
             e.printStackTrace();
         }

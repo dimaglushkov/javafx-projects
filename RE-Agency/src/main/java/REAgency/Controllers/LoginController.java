@@ -55,7 +55,7 @@ public class LoginController {
 
         Stage stage = (Stage) pageNameLabel.getScene().getWindow();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/fxml/main.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/fxml/property.fxml"))));
         } catch (IOException e) {
             e.printStackTrace();
         }
