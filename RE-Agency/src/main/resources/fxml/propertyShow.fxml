@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="REAgency.Controllers.PropertyShowController">
+   <children>
+      <HBox prefHeight="30.0" prefWidth="900.0" style="-fx-background-color: rgb(230,230,230);">
+         <children>
+            <Label fx:id="infoLabel" alignment="BOTTOM_LEFT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: rgb(230,230,230);" text="info">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="pageNameLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="303.0" style="-fx-background-color: rgb(230,230,230);" text="Недвижимость" underline="true">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="backLabel" alignment="CENTER" contentDisplay="RIGHT" onMouseClicked="#back" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: rgb(220,220,220);" text="Назад">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="190.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <TableView fx:id="propertyTable" prefHeight="718.0" prefWidth="900.0" />
+   </children>
+</VBox>

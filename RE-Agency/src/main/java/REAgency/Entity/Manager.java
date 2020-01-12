@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name="manager")
+@Table(name="MANAGER")
 public class Manager implements Serializable, Cloneable {
 
     @Id
@@ -12,10 +12,10 @@ public class Manager implements Serializable, Cloneable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="name")
+    @Column(name="NAME")
     private String name;
 
-    @Column(name="surname", nullable=false)
+    @Column(name="SURNAME", nullable=false)
     private String surname;
 
     @Column(name="SPEC", nullable=false)

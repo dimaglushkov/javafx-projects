@@ -2,6 +2,7 @@ package REAgency.Controllers;
 
 import REAgency.DAO.ManagerDAO;
 import REAgency.Entity.Manager;
+import REAgency.Converter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -46,7 +47,7 @@ public class RegisterController {
     private Label wrongInputLabel;
 
     public void register(ActionEvent event){
-        String spec = convertSpec(specInput.getValue());
+        String spec = Converter.convertSpec(specInput.getValue());
 
         if(!validateField(nameInput.getText())
                 || !validateField(surnameInput.getText())
@@ -63,7 +64,7 @@ public class RegisterController {
         manager.setName(nameInput.getText());
         manager.setSurname(surnameInput.getText());
         manager.setSpec(spec);
-        manager.setPassword(passwordInput.getText());
+        manager.setPassword(Converter.SHA256(passwordInput.getText()));
         manager.setComission(Integer.parseInt(comissionInput.getText()));
 
         managerDAO.create(manager);
@@ -102,22 +103,6 @@ public class RegisterController {
             return false;
         }
         return true;
-    }
-
-    private String convertSpec(String oldSpec){
-        switch (oldSpec)
-        {
-            case "Продажа":
-                return "sale";
-            case "Покупка":
-                return "buy";
-            case "Аренда":
-                return "rent";
-            case "Обмен":
-                return "trade";
-            default:
-                return "none";
-        }
     }
 
     public void loginPage(ActionEvent event){

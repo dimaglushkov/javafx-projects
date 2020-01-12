@@ -13,8 +13,8 @@ public class Main extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
         primaryStage.setTitle("Агенство недвижимости");
-
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setResizable(false);
+        primaryStage.setScene(new Scene(root, 900, 700));
         primaryStage.show();
     }
 

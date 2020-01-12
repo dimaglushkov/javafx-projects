@@ -2,10 +2,11 @@ package REAgency.Controllers;
 
 import REAgency.DAO.ManagerDAO;
 import REAgency.Entity.Manager;
+import REAgency.Converter;
+import REAgency.Session;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -14,6 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class LoginController {
 
@@ -44,15 +46,20 @@ public class LoginController {
             wrongInputLabel.setVisible(false);
 
         Manager manager = managerDAO.findById(Long.parseLong(idInput.getText()));
-        if (manager == null || !manager.getPassword().equals(passwordInput.getText())) {
+        if (manager == null || !Objects.equals(Converter.SHA256(passwordInput.getText()), manager.getPassword())) {
             wrongInputLabel.setVisible(true);
             return;
         }
 
-//        Manager manager = managerDAO.findByManagerId(Long.parseLong(idInput.getText()));
-//        System.out.print(manager.getName() + manager.getPassword());
-//        Stage stage = (Stage) loginButton.getScene().getWindow();
-//        stage.close();
+        Session.INSTANCE.start(manager);
+
+        Stage stage = (Stage) pageNameLabel.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/fxml/main.fxml"))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void registerPage(ActionEvent event){
