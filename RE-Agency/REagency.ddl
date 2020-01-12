@@ -4,7 +4,7 @@ CREATE TABLE manager(
     surname         VARCHAR(30) NOT NULL,
     spec            VARCHAR(5)  CHECK(spec IN ('rent', 'sale', 'buy', 'trade')) NOT NULL,
     comission       NUMBER      CHECK(comission > 0 AND comission < 100) NOT NULL,
-    password        VARCHAR(20) DEFAULT 'temppass' NOT NULL
+    password        VARCHAR(70) NOT NULL
 );  
 
 CREATE TABLE room(

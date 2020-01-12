@@ -6,12 +6,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="REAgency.Controllers.MainController">
    <children>
-      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: rgb(230,230,230);">
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: rgb(230,230,230);" VBox.vgrow="ALWAYS">
          <children>
-            <Label fx:id="infoLabel" alignment="BOTTOM_LEFT" contentDisplay="RIGHT" prefHeight="31.0" prefWidth="843.0" style="-fx-background-color: rgb(230,230,230);" text="info">
+            <Label fx:id="infoLabel" alignment="BOTTOM_LEFT" contentDisplay="RIGHT" prefHeight="31.0" prefWidth="843.0" style="-fx-background-color: rgb(230,230,230);" text="info" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="21.0" />
                </font>
@@ -26,19 +25,14 @@
             </Label>
          </children>
       </HBox>
-      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="900.0">
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
          <children>
-            <Label fx:id="propertyLabel" alignment="CENTER" onMouseClicked="#property" prefHeight="670.0" prefWidth="300.0" text="Недвижимость">
+            <Label fx:id="propertyLabel" alignment="CENTER" onMouseClicked="#property" prefHeight="670.0" prefWidth="450.0" text="Недвижимость" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="21.0" />
                </font>
             </Label>
-            <Label fx:id="exchangeLabel" alignment="CENTER" onMouseClicked="#exchange" prefHeight="670.0" prefWidth="300.0" style="-fx-background-color: rgb(240,240,240);" text="Сделки">
-               <font>
-                  <Font size="21.0" />
-               </font>
-            </Label>
-            <Label fx:id="statsLabel" alignment="CENTER" onMouseClicked="#stats" prefHeight="670.0" prefWidth="300.0" text="Статистика">
+            <Label fx:id="exchangeLabel" alignment="CENTER" onMouseClicked="#exchange" prefHeight="670.0" prefWidth="450.0" style="-fx-background-color: rgb(240,240,240);" text="Сделки">
                <font>
                   <Font size="21.0" />
                </font>

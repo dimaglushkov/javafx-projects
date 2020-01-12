@@ -10,7 +10,5 @@ public class ManagerDAO extends DAOService<Manager, Long> {
         super(Manager.class);
     }
 
-
-
 }
 

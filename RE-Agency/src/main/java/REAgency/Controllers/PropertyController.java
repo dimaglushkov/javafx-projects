@@ -22,7 +22,12 @@ public class PropertyController implements Initializable {
 
 
     public void add(MouseEvent event){
-        System.out.print("add()");
+        Stage stage = (Stage) infoLabel.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/fxml/propertyAdd.fxml"))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void delete(MouseEvent event){

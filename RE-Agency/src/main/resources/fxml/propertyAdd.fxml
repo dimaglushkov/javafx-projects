@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="REAgency.Controllers.PropertyAddController">
+   <children>
+      <HBox prefHeight="30.0" prefWidth="900.0" style="-fx-background-color: rgb(230,230,230);">
+         <children>
+            <Label fx:id="infoLabel" alignment="BOTTOM_LEFT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: rgb(230,230,230);" text="info">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="pageNameLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="303.0" style="-fx-background-color: rgb(230,230,230);" text="Недвижимость" underline="true">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="backLabel" alignment="CENTER" contentDisplay="RIGHT" onMouseClicked="#back" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: rgb(220,220,220);" text="Назад">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="190.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <Pane prefHeight="688.0" prefWidth="900.0">
+         <children>
+            <Label fx:id="addLabel" alignment="CENTER" contentDisplay="RIGHT" layoutX="514.0" layoutY="409.0" onMouseClicked="#add" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: rgb(220,220,220);" text="Добавить">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="202.0" layoutY="228.0" prefHeight="31.0" prefWidth="121.0" text="Площадь" textAlignment="RIGHT">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="areaInput" layoutX="334.0" layoutY="229.0" prefHeight="30.0" prefWidth="290.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" contentDisplay="RIGHT" layoutY="124.0" prefHeight="31.0" prefWidth="900.0" text="Добавить новую недвижимость" textAlignment="RIGHT">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="202.0" layoutY="268.0" prefHeight="31.0" prefWidth="121.0" text="Этаж" textAlignment="RIGHT">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="floorInput" layoutX="334.0" layoutY="268.0" prefHeight="30.0" prefWidth="290.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="202.0" layoutY="310.0" prefHeight="31.0" prefWidth="121.0" text="Номер кв." textAlignment="RIGHT">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="apartmentsInput" layoutX="334.0" layoutY="310.0" prefHeight="30.0" prefWidth="290.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="202.0" layoutY="350.0" prefHeight="31.0" prefWidth="121.0" text="Комнат" textAlignment="RIGHT">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numOfRoomsInput" layoutX="334.0" layoutY="350.0" prefHeight="30.0" prefWidth="290.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="202.0" layoutY="421.0" prefHeight="31.0" prefWidth="121.0" text="Балкон" textAlignment="RIGHT">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <padding>
+                  <Insets top="4.0" />
+               </padding>
+            </Label>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="202.0" layoutY="390.0" prefHeight="31.0" prefWidth="121.0" text="Ванна" textAlignment="RIGHT">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="202.0" layoutY="184.0" prefHeight="31.0" prefWidth="121.0" text="Дом" textAlignment="RIGHT">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="houseBox" layoutX="334.0" layoutY="184.0" prefHeight="31.0" prefWidth="290.0" />
+            <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="RIGHT" layoutY="479.0" prefHeight="31.0" prefWidth="900.0" text="Некорректные значения" textAlignment="RIGHT" textFill="RED" visible="false">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="successLabel" alignment="CENTER" contentDisplay="RIGHT" layoutY="479.0" prefHeight="31.0" prefWidth="900.0" text="Успешно добавлено" textAlignment="RIGHT" textFill="#01ff5a" visible="false">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="hasBathCheckBox" layoutX="334.0" layoutY="389.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="34.0" />
+            <CheckBox fx:id="hasBalconyCheckBox" layoutX="334.0" layoutY="423.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="27.0" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

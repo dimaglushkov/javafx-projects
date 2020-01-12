@@ -51,35 +51,27 @@ public class PropertyShowController implements Initializable {
         List<Property> properties = daoService.findAll();
 
         TableColumn<Data, Long> idCol = new TableColumn<>("id");
-        idCol.setPrefWidth(40);
         idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
 
         TableColumn<Data, String> houseDistrictCol = new TableColumn<>("Район");
-        houseDistrictCol.setPrefWidth(120);
         houseDistrictCol.setCellValueFactory(new PropertyValueFactory<>("houseDistrict"));
 
         TableColumn<Data, String> houseStreetCol = new TableColumn<>("Улица");
-        houseStreetCol.setPrefWidth(90);
         houseStreetCol.setCellValueFactory(new PropertyValueFactory<>("houseStreet"));
 
         TableColumn<Data, Integer> houseNumCol = new TableColumn<>("Номер дома");
-        houseNumCol.setPrefWidth(90);
         houseNumCol.setCellValueFactory(new PropertyValueFactory<>("houseNum"));
 
         TableColumn<Data, Integer> apartmentsCol = new TableColumn<>("Номер квартиры");
-        apartmentsCol.setPrefWidth(90);
         apartmentsCol.setCellValueFactory(new PropertyValueFactory<>("apartments"));
 
         TableColumn<Data, Integer> areaCol = new TableColumn<>("Площадь");
-        areaCol.setPrefWidth(90);
         areaCol.setCellValueFactory(new PropertyValueFactory<>("area"));
 
         TableColumn<Data, String> hasBathCol = new TableColumn<>("Ванная");
-        hasBathCol.setPrefWidth(90);
         hasBathCol.setCellValueFactory(new PropertyValueFactory<>("hasBath"));
 
         TableColumn<Data, String> hasBalconyCol = new TableColumn<>("Балкон");
-        hasBalconyCol.setPrefWidth(90);
         hasBalconyCol.setCellValueFactory(new PropertyValueFactory<>("hasBalcony"));
 
         ObservableList<Data> data = FXCollections.observableArrayList();
