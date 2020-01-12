@@ -1,15 +1,21 @@
 package StorageSystem;
 
 import StorageSystem.DAO.DAOService;
-import StorageSystem.Entities.testEntity;
+import StorageSystem.Entities.Product;
 
 public class dbtest {
 
     public static void main(String[] args) {
-        DAOService<testEntity, Long> daoService = new DAOService<>(testEntity.class);
+        DAOService<Product, Long> daoService = new DAOService<>(Product.class);
 
-        testEntity entity = daoService.findById(1L);
+//        Product product = daoService.findById(1);
+//        System.out.print(product.getId());
 
-        System.out.print(entity.getId());
+        Product product1  = new Product();
+        product1.setCategory("cat");
+        product1.setDescription("desc");
+        product1.setVendorCode("code");
+        daoService.create(product1);
+
     }
 }
