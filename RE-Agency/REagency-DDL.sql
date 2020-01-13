@@ -29,6 +29,6 @@ CREATE TABLE property(
 );
 
 ----
---DROP TABLE property;
---DROP TABLE house;
---DROP TABLE manager;
+-- DROP TABLE property;
+-- DROP TABLE house;
+-- DROP TABLE manager;
