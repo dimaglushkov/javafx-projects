@@ -1,13 +1,13 @@
 package Data;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
 
 @Entity
-@Table(name="EMPLOYEE")
-public class EmployeeEntity {
+@Table(name="PERSON")
+public class PersonEntity {
+
     @Id
-    @Column(name="EMPLOYEE_ID")
+    @Column(name="PERSON_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -17,16 +17,12 @@ public class EmployeeEntity {
     @Column(name="SURNAME")
     private String surname;
 
-    @Column(name="CONTRACT_ID")
-    private Long contractId;
-
-    public EmployeeEntity() {
+    public PersonEntity() {
     }
 
-    public EmployeeEntity(String name, String surname, Long contractId) {
+    public PersonEntity(String name, String surname) {
         this.name = name;
         this.surname = surname;
-        this.contractId = contractId;
     }
 
     public Long getId() {
@@ -53,11 +49,4 @@ public class EmployeeEntity {
         this.surname = surname;
     }
 
-    public Long getContractId() {
-        return contractId;
-    }
-
-    public void setContractId(Long contractId) {
-        this.contractId = contractId;
-    }
 }

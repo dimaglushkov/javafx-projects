@@ -1,12 +1,13 @@
 package Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Timestamp;
 
 @Entity
 @Table(name="BRANCH")
-public class BranchEntity {
+public class BranchEntity implements Cloneable, Serializable {
 
     @Id
     @Column(name="BRANCH_ID")
@@ -18,6 +19,9 @@ public class BranchEntity {
 
     @Column(name="BUILDING")
     private Integer building;
+
+    @Column(name="PHONE")
+    private String phone;
 
     @Column(name="CREATED")
     private Date created;
@@ -57,6 +61,14 @@ public class BranchEntity {
 
     public void setBuilding(Integer building) {
         this.building = building;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public Date getCreated() {

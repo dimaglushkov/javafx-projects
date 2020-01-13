@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: rgb(255,255,234);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.StudentsView">
+   <children>
+      <TableView fx:id="studentsTable" layoutX="173.0" layoutY="29.0" prefHeight="571.0" prefWidth="627.0" />
+      <ComboBox fx:id="action" layoutX="14.0" layoutY="154.0" onAction="#updateAction" prefWidth="150.0" />
+      <TextField fx:id="name" layoutX="15.0" layoutY="194.0" promptText="Имя" />
+      <TextField fx:id="surname" layoutX="15.0" layoutY="235.0" promptText="Фамилия" />
+      <TextField fx:id="course" layoutX="15.0" layoutY="275.0" promptText="id группы" />
+      <Button fx:id="doAction" layoutX="46.0" layoutY="318.0" mnemonicParsing="false" onAction="#doAction" prefHeight="17.0" prefWidth="86.0" text="Добавить">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text fx:id="error" fill="RED" layoutX="35.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Некорректные данные" textAlignment="CENTER" visible="false" wrappingWidth="108.373046875">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="173.0" layoutY="1.0" prefHeight="30.0" prefWidth="627.0" text="Список студентов" textAlignment="CENTER" textFill="#4a4a4a">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Text fx:id="error1" fill="#4a4a4a" layoutX="27.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Школа изучения иностранных языков" textAlignment="CENTER" wrappingWidth="124.373046875">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
