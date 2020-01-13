@@ -118,7 +118,7 @@ public class PropertyShowController implements Initializable {
             this.houseNum = new SimpleIntegerProperty(property.getHouse().getNum());
             this.apartments = new SimpleIntegerProperty(property.getApartments());
             this.area = new SimpleIntegerProperty(property.getArea());
-            this.hasBath = new SimpleStringProperty(property.getHasBalcony());
+            this.hasBath = new SimpleStringProperty(property.getHasBath());
             this.hasBalcony = new SimpleStringProperty(property.getHasBalcony());
         }
 
