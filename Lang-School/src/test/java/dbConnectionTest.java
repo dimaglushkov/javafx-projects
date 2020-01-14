@@ -1,6 +1,5 @@
 import Data.BranchEntity;
-import Data.DataBaseAccess;
-import org.dom4j.Branch;
+import Data.GenericDataBaseAccess;
 
 import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
@@ -10,7 +9,7 @@ public class dbConnectionTest {
 
 
     public static void main(String[] args) throws UnsupportedEncodingException, SQLException {
-        DataBaseAccess<BranchEntity, Long> dataBaseAccess = new DataBaseAccess<BranchEntity, Long>(BranchEntity.class);
+        GenericDataBaseAccess<BranchEntity, Long> dataBaseAccess = new GenericDataBaseAccess<BranchEntity, Long>(BranchEntity.class);
         List<BranchEntity> branchEntities = dataBaseAccess.findAll();
         for (BranchEntity branchEntity : branchEntities){
 //            String data = new String(branchEntity.getStreet().getBytes(), "WINDOWS-1252");

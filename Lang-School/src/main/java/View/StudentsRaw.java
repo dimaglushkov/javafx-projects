@@ -7,6 +7,7 @@ import javafx.beans.property.SimpleStringProperty;
 public class StudentsRaw {
 
     private SimpleLongProperty id;
+    private SimpleLongProperty personId;
     private SimpleStringProperty name;
     private SimpleStringProperty surname;
     private SimpleStringProperty address;
@@ -15,6 +16,7 @@ public class StudentsRaw {
 
     public StudentsRaw() {
         id = new SimpleLongProperty();
+        personId = new SimpleLongProperty();
         name = new SimpleStringProperty();
         surname = new SimpleStringProperty();
         address = new SimpleStringProperty();
@@ -32,6 +34,18 @@ public class StudentsRaw {
 
     public void setId(long id) {
         this.id.set(id);
+    }
+
+    public long getPersonId() {
+        return personId.get();
+    }
+
+    public SimpleLongProperty personIdProperty() {
+        return personId;
+    }
+
+    public void setPersonId(long personId) {
+        this.personId.set(personId);
     }
 
     public String getName() {

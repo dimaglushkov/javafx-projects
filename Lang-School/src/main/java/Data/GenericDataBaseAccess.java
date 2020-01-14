@@ -7,17 +7,17 @@ import javax.persistence.criteria.CriteriaQuery;
 import java.io.Serializable;
 import java.util.List;
 
-public class DataBaseAccess<T, PK extends Serializable> {
+public class GenericDataBaseAccess<T, PK extends Serializable> {
 
     private EntityManagerFactory entityManagerFactory = PersistenceManager.getInstance().getEntityManagerFactory();
 
     private Class<T> type;
 
-    public DataBaseAccess() {
+    public GenericDataBaseAccess() {
     }
 
 
-    public DataBaseAccess(Class <T> type) {
+    public GenericDataBaseAccess(Class <T> type) {
         this.type=type;
     }
 
