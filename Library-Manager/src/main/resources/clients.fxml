@@ -36,7 +36,7 @@
             </Text>
          </children>
       </Pane>
-      <Button fx:id="clientsButton" layoutX="34.0" layoutY="258.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="124.0" text="Клиенты">
+      <Button fx:id="clientsButton" layoutX="34.0" layoutY="255.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="124.0" text="Клиенты">
          <font>
             <Font size="17.0" />
          </font>
@@ -48,6 +48,11 @@
                   <TableView fx:id="clientsTable" prefHeight="671.0" prefWidth="814.0" />
                </content>
           </Tab>
+            <Tab fx:id="showTab1" closable="false" text="Должники">
+               <content>
+                  <TableView fx:id="debtorTable" prefHeight="671.0" prefWidth="814.0" />
+               </content>
+            </Tab>
           <Tab fx:id="addTab" closable="false" text="Добавить">
                <content>
                   <Pane prefHeight="667.0" prefWidth="754.0" style="-fx-background-color: rgb(255,255,240);">
@@ -126,5 +131,10 @@
           </Tab>
         </tabs>
       </TabPane>
+      <Button fx:id="rentsButton" layoutX="34.0" layoutY="315.0" mnemonicParsing="false" onAction="#rentsButton" prefHeight="42.0" prefWidth="124.0" text="Выдачи">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

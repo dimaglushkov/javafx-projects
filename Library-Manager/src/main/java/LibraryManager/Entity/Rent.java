@@ -3,6 +3,7 @@ package LibraryManager.Entity;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name="rent")
@@ -21,7 +22,7 @@ public class Rent {
     Book book;
 
     @Column(name="day")
-    Date day;
+    Timestamp day;
 
     @Column(name="duration")
     Integer duration;
@@ -53,11 +54,11 @@ public class Rent {
         this.book = book;
     }
 
-    public Date getDay() {
+    public Timestamp getDay() {
         return day;
     }
 
-    public void setDay(Date day) {
+    public void setDay(Timestamp day) {
         this.day = day;
     }
 

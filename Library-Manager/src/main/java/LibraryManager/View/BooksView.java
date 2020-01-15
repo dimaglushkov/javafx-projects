@@ -2,6 +2,7 @@ package LibraryManager.View;
 
 import LibraryManager.Data.DBAObject;
 import LibraryManager.Entity.*;
+import LibraryManager.View.TableContent.BookTableContent;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,7 +16,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -118,6 +118,15 @@ public class BooksView implements Initializable {
             e.printStackTrace();
         }
 
+    }
+
+    public void rentsButton(ActionEvent event) {
+        Stage stage = (Stage) clientsButton.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/rents.fxml"))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void error(){

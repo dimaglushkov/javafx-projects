@@ -1,4 +1,4 @@
-package LibraryManager.View;
+package LibraryManager.View.TableContent;
 
 import LibraryManager.Entity.Customer;
 import javafx.beans.property.SimpleIntegerProperty;
