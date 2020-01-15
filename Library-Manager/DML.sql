@@ -10,10 +10,10 @@ INSERT INTO PERSON(FIRST_NAME, SECOND_NAME, THIRD_NAME) VALUES ('Олег', 'Х�
 INSERT INTO PERSON(FIRST_NAME, SECOND_NAME, THIRD_NAME) VALUES ('Вячеслав', 'Кирилленко', 'Ильич');
 
 
-INSERT INTO GENRE(VALUE) VALUES ('Роман');
-INSERT INTO GENRE(VALUE) VALUES ('Исторический жанр');
-INSERT INTO GENRE(VALUE) VALUES ('Поэма');
-INSERT INTO GENRE(VALUE) VALUES ('Фэнтези');
+INSERT INTO AUTHOR(PERSON_ID, NATIONALITY) VALUES (1, 'Россия');
+INSERT INTO AUTHOR(PERSON_ID, NATIONALITY) VALUES (2, 'Великобритания');
+INSERT INTO AUTHOR(PERSON_ID, NATIONALITY) VALUES (3, 'Россия');
+INSERT INTO AUTHOR(PERSON_ID, NATIONALITY) VALUES (4, 'Россия');
 
 
 INSERT INTO CUSTOMER(PERSON_ID, ADDRESS, PHONE) VALUES (5, 'ул. Восстания, д. 5 к.3, кв 31', '+79123456789');
@@ -21,7 +21,12 @@ INSERT INTO CUSTOMER(PERSON_ID, ADDRESS, PHONE) VALUES (6, 'Невский пр.
 INSERT INTO CUSTOMER(PERSON_ID, ADDRESS, PHONE) VALUES (7, 'ул. Восстания, д. 11, кв 491', '+79323456789');
 INSERT INTO CUSTOMER(PERSON_ID, ADDRESS, PHONE) VALUES (8, 'ул. Адмиралтейская, д. 141, кв 56', '+79423456789');
 INSERT INTO CUSTOMER(PERSON_ID, ADDRESS, PHONE) VALUES (9, 'ул. Ленина, д. 21, кв 95', '+79523456789');
-INSERT INTO CUSTOMER(PERSON_ID, ADDRESS, PHONE) VALUES (10, 'ул. Ленина, д. 22, кв 81', '+79623456789');
+
+
+INSERT INTO GENRE(VALUE) VALUES ('Роман');
+INSERT INTO GENRE(VALUE) VALUES ('Исторический жанр');
+INSERT INTO GENRE(VALUE) VALUES ('Поэма');
+INSERT INTO GENRE(VALUE) VALUES ('Фэнтези');
 
 
 INSERT INTO BOOK(AUTHOR_ID, NAME, PUBLISHER, PUBLISHED, GENRE, PAGES) VALUES (1, 'Капитанская дочка', 'АСТ', 2015, 2, 352);
