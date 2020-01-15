@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManager.View.BooksView">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@lib.jpg" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <Button fx:id="booksTab" layoutX="34.0" layoutY="195.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="124.0" text="Книги">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Pane layoutX="17.0" layoutY="32.0" prefHeight="114.0" prefWidth="158.0" style="-fx-background-color: rgb(240,240,240);">
+         <children>
+            <Text layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Система управления библиотекой" textAlignment="CENTER" wrappingWidth="158.00002217292786">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Button fx:id="clientsButton" layoutX="34.0" layoutY="258.0" mnemonicParsing="false" onAction="#clientsButton" prefHeight="42.0" prefWidth="124.0" text="Клиенты">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <TabPane layoutX="193.0" layoutY="-1.0" prefHeight="700.0" prefWidth="814.0" style="-fx-background-color: rgb(255,255,240);" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="showTab" closable="false" text="Просмотреть">
+               <content>
+                  <TableView fx:id="booksTable" prefHeight="671.0" prefWidth="814.0" />
+               </content>
+          </Tab>
+          <Tab fx:id="addTab" closable="false" text="Добавить">
+               <content>
+                  <Pane prefHeight="667.0" prefWidth="754.0" style="-fx-background-color: rgb(255,255,240);">
+                     <children>
+                        <Pane layoutX="186.0" layoutY="114.0" prefHeight="443.0" prefWidth="443.0" style="-fx-background-color: rgb(240,240,240);">
+                           <children>
+                              <Text layoutX="105.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавить книгу" textAlignment="CENTER" wrappingWidth="233.00002217292786">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="nameField" layoutX="157.0" layoutY="88.0" prefHeight="25.0" prefWidth="229.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <ComboBox fx:id="authorBox" layoutX="157.0" layoutY="132.0" prefHeight="25.0" prefWidth="229.0" />
+                              <Text layoutX="58.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Автор" wrappingWidth="60.13671875">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="58.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Жанр" wrappingWidth="60.13671875">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <ComboBox fx:id="genreBox" layoutX="157.0" layoutY="173.0" prefHeight="25.0" prefWidth="229.0" />
+                              <Text layoutX="58.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Издатель" wrappingWidth="88.13671875">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="publisherField" layoutX="157.0" layoutY="210.0" prefHeight="25.0" prefWidth="229.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="58.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Год изд." wrappingWidth="88.13671875">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="publishedField" layoutX="157.0" layoutY="249.0" prefHeight="25.0" prefWidth="229.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="58.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название" wrappingWidth="88.13671875">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="58.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Страниц" wrappingWidth="88.13671875">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="pagesField" layoutX="157.0" layoutY="290.0" prefHeight="25.0" prefWidth="229.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="addButton" layoutX="175.0" layoutY="349.0" mnemonicParsing="false" onAction="#add" prefHeight="28.0" prefWidth="94.0" text="Добавить">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Button>
+                              <Text fx:id="statusText" layoutX="132.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="status" textAlignment="CENTER" visible="false" wrappingWidth="180.13671875">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>
